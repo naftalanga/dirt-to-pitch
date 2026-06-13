@@ -77,7 +77,7 @@ if __name__ == "__main__":
     def _hacer_equipo(nombre, fis, tec, defe, men, arq_portero):
         portero  = Jugador(nombre=f"{nombre}_POR", fis=fis, tec=tec, defe=defe, men=men, arq=arq_portero)
         campo    = [
-            Jugador(nombre=f"{nombre}_J{i}", fis=fis, tec=tec, defe=defe, men=men, arq=0.0)
+            Jugador(nombre=f"{nombre}_J{i}", fis=fis, tec=tec, defe=defe, men=men, arq=1.0)
             for i in range(1, 11)
         ]
         return Equipo(nombre=nombre, jugadores=[portero] + campo)
