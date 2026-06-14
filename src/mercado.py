@@ -1,6 +1,7 @@
 from motor_core import Equipo
 from generador import generar_jugador, generar_equipo_rival
 from db_manager import guardar_partida
+from liga import generar_fixture
 
 
 def draft_inicial(presupuesto: int = 15000) -> tuple:
@@ -90,7 +91,10 @@ if __name__ == "__main__":
     ]
     lista_rivales = [generar_equipo_rival(n) for n in nombres_rivales]
 
-    guardar_partida(equipo, caja, lista_rivales)
+    todos_los_nombres = [equipo.nombre] + nombres_rivales
+    fixture = generar_fixture(todos_los_nombres)
+
+    guardar_partida(equipo, caja, lista_rivales, fixture, 1)
     print("[SAVE] ¡Tu equipo ha sido registrado en la base de datos!")
     print(f"\nRESUMEN FINAL: {equipo.nombre}  |  Caja: ${caja}")
     print(f"{'NOMBRE':<28} {'FÍS':>4} {'TÉC':>4} {'DEF':>4} {'MEN':>4} {'ARQ':>4}  {'EDAD':>4}  {'PRECIO':>7}")
