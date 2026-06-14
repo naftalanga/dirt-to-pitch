@@ -1,5 +1,5 @@
 import random
-from motor_core import Jugador
+from motor_core import Jugador, Equipo
 
 # ---------------------------------------------------------------------------
 # Bases de datos de nombres (parodia fútbol sudamericano)
@@ -77,6 +77,39 @@ def generar_jugador(rango: str) -> Jugador:
         edad=edad,
         precio=precio,
     )
+
+
+# ---------------------------------------------------------------------------
+# Generador de equipo rival
+# ---------------------------------------------------------------------------
+def generar_equipo_rival(nombre: str) -> Equipo:
+    """Genera un Equipo de 11 jugadores 'barro' con exactamente 1 portero garantizado."""
+    cfg    = _RANGOS["barro"]
+    a_min, a_max = cfg["arq"]
+
+    # 1 portero forzado
+    portero_nombre = f"{random.choice(NOMBRES)} {random.choice(APELLIDOS)}"
+    portero = Jugador(
+        nombre=portero_nombre,
+        fis=1.0,
+        tec=1.0,
+        defe=1.0,
+        men=1.0,
+        arq=float(random.randint(a_min, a_max)),
+        edad=random.randint(17, 35),
+        precio=0,
+    )
+    portero.precio = int((portero.fis + portero.tec + portero.defe + portero.men + portero.arq) * _PRECIO_FACTOR)
+
+    # 10 jugadores de campo forzados (arq == 1.0)
+    campo = []
+    for _ in range(10):
+        j = generar_jugador("barro")
+        j.arq = 1.0
+        j.precio = int((j.fis + j.tec + j.defe + j.men + j.arq) * _PRECIO_FACTOR)
+        campo.append(j)
+
+    return Equipo(nombre=nombre, jugadores=[portero] + campo)
 
 
 # ---------------------------------------------------------------------------

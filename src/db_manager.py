@@ -6,11 +6,12 @@ from motor_core import Jugador, Equipo
 RUTA_DB = "db/partida.json"
 
 
-def guardar_partida(equipo: Equipo, caja: int) -> None:
+def guardar_partida(equipo: Equipo, caja: int, rivales: list = []) -> None:
     os.makedirs("db", exist_ok=True)
     datos = {
-        "equipo": asdict(equipo),
-        "caja":   caja,
+        "equipo":  asdict(equipo),
+        "caja":    caja,
+        "rivales": [asdict(r) for r in rivales],
     }
     with open(RUTA_DB, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=4, ensure_ascii=False)
@@ -27,9 +28,16 @@ def cargar_partida() -> tuple | None:
     jugadores = [Jugador(**j) for j in datos["equipo"]["jugadores"]]
     equipo    = Equipo(nombre=datos["equipo"]["nombre"], jugadores=jugadores)
     caja      = datos["caja"]
+    rivales   = [
+        Equipo(
+            nombre=r["nombre"],
+            jugadores=[Jugador(**j) for j in r["jugadores"]],
+        )
+        for r in datos.get("rivales", [])
+    ]
 
-    print(f"[LOAD] Partida cargada: '{equipo.nombre}'  |  Caja: ${caja}")
-    return (equipo, caja)
+    print(f"[LOAD] Partida cargada: '{equipo.nombre}'  |  Caja: ${caja}  |  Rivales: {len(rivales)}")
+    return (equipo, caja, rivales)
 
 
 # if __name__ == "__main__":

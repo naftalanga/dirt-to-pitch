@@ -1,5 +1,5 @@
 from motor_core import Equipo
-from generador import generar_jugador
+from generador import generar_jugador, generar_equipo_rival
 from db_manager import guardar_partida
 
 
@@ -78,7 +78,19 @@ def draft_inicial(presupuesto: int = 15000) -> tuple:
 
 if __name__ == "__main__":
     equipo, caja = draft_inicial()
-    guardar_partida(equipo, caja)
+
+    nombres_rivales = [
+        "Sporting de Lisboa",
+        "Milán AC",
+        "Real Mandril",
+        "Boca Jrs",
+        "Colo Colo Dummy",
+        "U de Chile RC",
+        "Deportivo Conceptivo",
+    ]
+    lista_rivales = [generar_equipo_rival(n) for n in nombres_rivales]
+
+    guardar_partida(equipo, caja, lista_rivales)
     print("[SAVE] ¡Tu equipo ha sido registrado en la base de datos!")
     print(f"\nRESUMEN FINAL: {equipo.nombre}  |  Caja: ${caja}")
     print(f"{'NOMBRE':<28} {'FÍS':>4} {'TÉC':>4} {'DEF':>4} {'MEN':>4} {'ARQ':>4}  {'EDAD':>4}  {'PRECIO':>7}")
