@@ -1,0 +1,118 @@
+{
+    "equipo": {
+        "nombre": "Barro FC Dummy",
+        "jugadores": [
+            {
+                "nombre": "Lianel Messido",
+                "fis": 1.0,
+                "tec": 1.0,
+                "defe": 1.0,
+                "men": 1.0,
+                "arq": 4.0,
+                "edad": 28,
+                "precio": 800
+            },
+            {
+                "nombre": "Barro J1",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J2",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J3",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J4",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J5",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J6",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J7",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J8",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J9",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Barro J10",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 2.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            }
+        ]
+    },
+    "caja": 5000
+}

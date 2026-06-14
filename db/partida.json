@@ -1,0 +1,118 @@
+{
+    "equipo": {
+        "nombre": "Titi fc",
+        "jugadores": [
+            {
+                "nombre": "Tevéz Cavaniño",
+                "fis": 4.0,
+                "tec": 1.0,
+                "defe": 2.0,
+                "men": 1.0,
+                "arq": 1.0,
+                "edad": 23,
+                "precio": 900
+            },
+            {
+                "nombre": "Riquelme Messido",
+                "fis": 3.0,
+                "tec": 4.0,
+                "defe": 4.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 27,
+                "precio": 1400
+            },
+            {
+                "nombre": "Marcelho Flores",
+                "fis": 1,
+                "tec": 1,
+                "defe": 1,
+                "men": 1,
+                "arq": 3.0,
+                "edad": 26,
+                "precio": 700
+            },
+            {
+                "nombre": "Lianel Moreno",
+                "fis": 2.0,
+                "tec": 2.0,
+                "defe": 4.0,
+                "men": 3.0,
+                "arq": 1.0,
+                "edad": 17,
+                "precio": 1200
+            },
+            {
+                "nombre": "Lianel Ramírez",
+                "fis": 1,
+                "tec": 1,
+                "defe": 1,
+                "men": 1,
+                "arq": 4.0,
+                "edad": 30,
+                "precio": 800
+            },
+            {
+                "nombre": "Chupete Flores",
+                "fis": 1.0,
+                "tec": 1.0,
+                "defe": 2.0,
+                "men": 4.0,
+                "arq": 1.0,
+                "edad": 22,
+                "precio": 900
+            },
+            {
+                "nombre": "Arturo Messido",
+                "fis": 1.0,
+                "tec": 3.0,
+                "defe": 2.0,
+                "men": 3.0,
+                "arq": 1.0,
+                "edad": 17,
+                "precio": 1000
+            },
+            {
+                "nombre": "Marcelho Vidal",
+                "fis": 2.0,
+                "tec": 1.0,
+                "defe": 4.0,
+                "men": 4.0,
+                "arq": 1.0,
+                "edad": 28,
+                "precio": 1200
+            },
+            {
+                "nombre": "Chupete Zapatazo",
+                "fis": 1,
+                "tec": 1,
+                "defe": 1,
+                "men": 1,
+                "arq": 4.0,
+                "edad": 26,
+                "precio": 800
+            },
+            {
+                "nombre": "Falcao Suárez",
+                "fis": 1.0,
+                "tec": 1.0,
+                "defe": 1.0,
+                "men": 3.0,
+                "arq": 1.0,
+                "edad": 17,
+                "precio": 700
+            },
+            {
+                "nombre": "Palermo Flores",
+                "fis": 4.0,
+                "tec": 1.0,
+                "defe": 1.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 20,
+                "precio": 900
+            }
+        ]
+    },
+    "caja": 4500
+}
