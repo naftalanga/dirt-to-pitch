@@ -6,7 +6,7 @@ from motor_core import Jugador, Equipo
 RUTA_DB = "db/partida.json"
 
 
-def guardar_partida(equipo: Equipo, caja: int, rivales: list = [], fixture: dict = {}, fecha_actual: int = 1) -> None:
+def guardar_partida(equipo: Equipo, caja: int, rivales: list = [], fixture: dict = {}, fecha_actual: int = 1, tabla: dict = None) -> None:
     os.makedirs("db", exist_ok=True)
     # Las claves del fixture son int en memoria pero JSON las convierte a str; se guardan como str.
     datos = {
@@ -15,6 +15,7 @@ def guardar_partida(equipo: Equipo, caja: int, rivales: list = [], fixture: dict
         "rivales":      [asdict(r) for r in rivales],
         "fixture":      {str(k): v for k, v in fixture.items()},
         "fecha_actual": fecha_actual,
+        "tabla":        tabla,
     }
     with open(RUTA_DB, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=4, ensure_ascii=False)
@@ -44,8 +45,10 @@ def cargar_partida() -> tuple | None:
     fixture      = {int(k): [tuple(p) for p in v] for k, v in fixture_raw.items()}
     fecha_actual = datos.get("fecha_actual", 1)
 
+    tabla        = datos.get("tabla")
+
     print(f"[LOAD] Partida cargada: '{equipo.nombre}'  |  Caja: ${caja}  |  Rivales: {len(rivales)}  |  Fecha: {fecha_actual}")
-    return (equipo, caja, rivales, fixture, fecha_actual)
+    return (equipo, caja, rivales, fixture, fecha_actual, tabla)
 
 
 # if __name__ == "__main__":
