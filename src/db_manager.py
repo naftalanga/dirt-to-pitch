@@ -6,23 +6,30 @@ from motor_core import Jugador, Equipo
 RUTA_DB = "db/partida.json"
 
 
-def guardar_partida(equipo: Equipo, caja: int, rivales: list = [], fixture: dict = {}, fecha_actual: int = 1, tabla: dict = None) -> None:
+def guardar_partida(partida: dict) -> None:
+    """
+    Recibe el dict de estado completo de la partida y lo persiste en el JSON.
+    Claves esperadas: equipo (Equipo), caja, rivales, fixture, fecha_actual,
+                      tabla, formacion_actual, estilo_actual.
+    """
     os.makedirs("db", exist_ok=True)
     # Las claves del fixture son int en memoria pero JSON las convierte a str; se guardan como str.
     datos = {
-        "equipo":       asdict(equipo),
-        "caja":         caja,
-        "rivales":      [asdict(r) for r in rivales],
-        "fixture":      {str(k): v for k, v in fixture.items()},
-        "fecha_actual": fecha_actual,
-        "tabla":        tabla,
+        "equipo":           asdict(partida["equipo"]),
+        "caja":             partida["caja"],
+        "rivales":          [asdict(r) for r in partida["rivales"]],
+        "fixture":          {str(k): v for k, v in partida["fixture"].items()},
+        "fecha_actual":     partida["fecha_actual"],
+        "tabla":            partida.get("tabla"),
+        "formacion_actual": partida.get("formacion_actual", "4-4-2"),
+        "estilo_actual":    partida.get("estilo_actual",    "Equilibrado"),
     }
     with open(RUTA_DB, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=4, ensure_ascii=False)
     print(f"[SAVE] Partida guardada en '{RUTA_DB}'.")
 
 
-def cargar_partida() -> tuple | None:
+def cargar_partida() -> dict | None:
     if not os.path.exists(RUTA_DB):
         return None
 
@@ -45,10 +52,22 @@ def cargar_partida() -> tuple | None:
     fixture      = {int(k): [tuple(p) for p in v] for k, v in fixture_raw.items()}
     fecha_actual = datos.get("fecha_actual", 1)
 
-    tabla        = datos.get("tabla")
+    tabla            = datos.get("tabla")
+    formacion_actual = datos.get("formacion_actual", "4-4-2")
+    estilo_actual    = datos.get("estilo_actual",    "Equilibrado")
 
     print(f"[LOAD] Partida cargada: '{equipo.nombre}'  |  Caja: ${caja}  |  Rivales: {len(rivales)}  |  Fecha: {fecha_actual}")
-    return (equipo, caja, rivales, fixture, fecha_actual, tabla)
+
+    return {
+        "equipo":           equipo,
+        "caja":             caja,
+        "rivales":          rivales,
+        "fixture":          fixture,
+        "fecha_actual":     fecha_actual,
+        "tabla":            tabla,
+        "formacion_actual": formacion_actual,
+        "estilo_actual":    estilo_actual,
+    }
 
 
 # if __name__ == "__main__":

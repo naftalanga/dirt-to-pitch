@@ -1176,87 +1176,89 @@
             ]
         ]
     },
-    "fecha_actual": 2,
+    "fecha_actual": 5,
     "tabla": {
         "Pencas": {
-            "PJ": 1,
-            "PG": 1,
-            "PE": 0,
+            "PJ": 4,
+            "PG": 3,
+            "PE": 1,
             "PP": 0,
-            "GF": 1,
-            "GC": 0,
-            "DG": 1,
-            "PTS": 3
+            "GF": 6,
+            "GC": 2,
+            "DG": 4,
+            "PTS": 10
         },
         "Sporting de Lisboa": {
-            "PJ": 1,
-            "PG": 1,
+            "PJ": 4,
+            "PG": 3,
             "PE": 0,
-            "PP": 0,
-            "GF": 3,
-            "GC": 0,
-            "DG": 3,
-            "PTS": 3
+            "PP": 1,
+            "GF": 8,
+            "GC": 2,
+            "DG": 6,
+            "PTS": 9
         },
         "Milán AC": {
-            "PJ": 1,
-            "PG": 0,
+            "PJ": 4,
+            "PG": 2,
             "PE": 1,
-            "PP": 0,
-            "GF": 1,
-            "GC": 1,
-            "DG": 0,
-            "PTS": 1
+            "PP": 1,
+            "GF": 5,
+            "GC": 4,
+            "DG": 1,
+            "PTS": 7
         },
         "Real Mandril": {
-            "PJ": 1,
-            "PG": 1,
+            "PJ": 4,
+            "PG": 2,
             "PE": 0,
-            "PP": 0,
-            "GF": 2,
-            "GC": 0,
-            "DG": 2,
-            "PTS": 3
+            "PP": 2,
+            "GF": 4,
+            "GC": 3,
+            "DG": 1,
+            "PTS": 6
         },
         "Boca Jrs": {
-            "PJ": 1,
-            "PG": 0,
+            "PJ": 4,
+            "PG": 1,
             "PE": 0,
-            "PP": 1,
-            "GF": 0,
-            "GC": 2,
-            "DG": -2,
-            "PTS": 0
+            "PP": 3,
+            "GF": 5,
+            "GC": 9,
+            "DG": -4,
+            "PTS": 3
         },
         "Colo Colo Dummy": {
-            "PJ": 1,
-            "PG": 0,
-            "PE": 1,
+            "PJ": 4,
+            "PG": 2,
+            "PE": 2,
             "PP": 0,
-            "GF": 1,
-            "GC": 1,
-            "DG": 0,
-            "PTS": 1
+            "GF": 5,
+            "GC": 3,
+            "DG": 2,
+            "PTS": 8
         },
         "U de Chile RC": {
-            "PJ": 1,
+            "PJ": 4,
             "PG": 0,
             "PE": 0,
-            "PP": 1,
-            "GF": 0,
-            "GC": 3,
-            "DG": -3,
+            "PP": 4,
+            "GF": 1,
+            "GC": 9,
+            "DG": -8,
             "PTS": 0
         },
         "Deportivo Conceptivo": {
-            "PJ": 1,
-            "PG": 0,
+            "PJ": 4,
+            "PG": 1,
             "PE": 0,
-            "PP": 1,
-            "GF": 0,
-            "GC": 1,
-            "DG": -1,
-            "PTS": 0
+            "PP": 3,
+            "GF": 2,
+            "GC": 4,
+            "DG": -2,
+            "PTS": 3
         }
-    }
+    },
+    "formacion_actual": "4-5-1",
+    "estilo_actual": "Ofensivo"
 }
