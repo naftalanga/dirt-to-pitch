@@ -1,6 +1,6 @@
 import sys
 from db_manager import cargar_partida, guardar_partida
-from simulador import simular_partido
+from motor_core import simular_partido
 from liga import imprimir_tabla, inicializar_tabla, actualizar_tabla
 
 # ---------------------------------------------------------------------------
@@ -68,10 +68,9 @@ while True:
                 equipo_v = next(e for e in todos_los_equipos if e.nombre == nombre_visita)
 
                 resultado = simular_partido(
-                    equipo_l, "4-4-2",
-                    equipo_v, "4-4-2",
-                    presion=5,
-                    chances_totales=10,
+                    equipo_l, equipo_v,
+                    formacion_l="4-4-2", estilo_l="Equilibrado",
+                    formacion_v="4-4-2", estilo_v="Equilibrado",
                 )
                 goles_l = resultado["local"]
                 goles_v = resultado["visita"]

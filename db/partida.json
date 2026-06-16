@@ -1,233 +1,233 @@
 {
     "equipo": {
-        "nombre": "Universidad Monjolica",
+        "nombre": "Pencas",
         "jugadores": [
             {
-                "nombre": "Robiniho Cuevitas",
+                "nombre": "Cuadrabo Guerrero",
                 "fis": 1,
                 "tec": 1,
                 "defe": 1,
                 "men": 1,
                 "arq": 3.0,
-                "edad": 26,
+                "edad": 35,
                 "precio": 700
             },
             {
-                "nombre": "Higuaín Cavaniño",
-                "fis": 4.0,
-                "tec": 2.0,
-                "defe": 3.0,
-                "men": 1.0,
-                "arq": 1.0,
-                "edad": 24,
-                "precio": 1100
-            },
-            {
-                "nombre": "Arturo Messido",
-                "fis": 3.0,
-                "tec": 4.0,
-                "defe": 2.0,
-                "men": 1.0,
-                "arq": 1.0,
-                "edad": 23,
-                "precio": 1100
-            },
-            {
-                "nombre": "Falcao Rodriguito",
-                "fis": 4.0,
-                "tec": 2.0,
-                "defe": 2.0,
-                "men": 4.0,
-                "arq": 1.0,
-                "edad": 18,
-                "precio": 1300
-            },
-            {
-                "nombre": "Robiniho Rodriguito",
-                "fis": 1.0,
-                "tec": 3.0,
-                "defe": 1.0,
-                "men": 4.0,
-                "arq": 1.0,
-                "edad": 26,
-                "precio": 1000
-            },
-            {
-                "nombre": "Varguitas Cuevitas",
+                "nombre": "Chupete Vidal",
                 "fis": 2.0,
-                "tec": 2.0,
-                "defe": 2.0,
-                "men": 4.0,
-                "arq": 1.0,
-                "edad": 22,
-                "precio": 1100
-            },
-            {
-                "nombre": "Tevéz Messido",
-                "fis": 4.0,
                 "tec": 3.0,
-                "defe": 3.0,
-                "men": 1.0,
-                "arq": 1.0,
-                "edad": 29,
-                "precio": 1200
-            },
-            {
-                "nombre": "Cuadrabo Moreno",
-                "fis": 2.0,
-                "tec": 2.0,
                 "defe": 4.0,
                 "men": 3.0,
                 "arq": 1.0,
-                "edad": 24,
+                "edad": 27,
+                "precio": 1300
+            },
+            {
+                "nombre": "Ronaldiño Cuevitas",
+                "fis": 1.0,
+                "tec": 2.0,
+                "defe": 4.0,
+                "men": 4.0,
+                "arq": 1.0,
+                "edad": 23,
                 "precio": 1200
             },
             {
-                "nombre": "Tevéz Ramírez",
-                "fis": 4.0,
-                "tec": 2.0,
-                "defe": 3.0,
+                "nombre": "Marcelho Vidal",
+                "fis": 1.0,
+                "tec": 4.0,
+                "defe": 4.0,
                 "men": 2.0,
                 "arq": 1.0,
-                "edad": 25,
+                "edad": 20,
                 "precio": 1200
             },
             {
-                "nombre": "Kaká Flores",
-                "fis": 2.0,
-                "tec": 4.0,
-                "defe": 1.0,
-                "men": 3.0,
+                "nombre": "Falcao Sánchulo",
+                "fis": 4.0,
+                "tec": 1.0,
+                "defe": 4.0,
+                "men": 2.0,
                 "arq": 1.0,
-                "edad": 29,
+                "edad": 27,
+                "precio": 1200
+            },
+            {
+                "nombre": "Riquelme Sánchulo",
+                "fis": 4.0,
+                "tec": 3.0,
+                "defe": 2.0,
+                "men": 1.0,
+                "arq": 1.0,
+                "edad": 18,
                 "precio": 1100
             },
             {
-                "nombre": "Riquelme Moreno",
+                "nombre": "Falcao Farfánez",
+                "fis": 2.0,
+                "tec": 4.0,
+                "defe": 4.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 23,
+                "precio": 1300
+            },
+            {
+                "nombre": "Lianel Díazco",
+                "fis": 4.0,
+                "tec": 3.0,
+                "defe": 3.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 23,
+                "precio": 1300
+            },
+            {
+                "nombre": "Aimar Messido",
                 "fis": 3.0,
-                "tec": 1.0,
-                "defe": 2.0,
+                "tec": 4.0,
+                "defe": 3.0,
                 "men": 3.0,
                 "arq": 1.0,
-                "edad": 24,
+                "edad": 35,
+                "precio": 1400
+            },
+            {
+                "nombre": "Falcao Suárez",
+                "fis": 4.0,
+                "tec": 4.0,
+                "defe": 3.0,
+                "men": 2.0,
+                "arq": 1.0,
+                "edad": 20,
+                "precio": 1400
+            },
+            {
+                "nombre": "Chupete Zapatazo",
+                "fis": 1.0,
+                "tec": 1.0,
+                "defe": 4.0,
+                "men": 3.0,
+                "arq": 1.0,
+                "edad": 18,
                 "precio": 1000
             }
         ]
     },
-    "caja": 3000,
+    "caja": 1900,
     "rivales": [
         {
             "nombre": "Sporting de Lisboa",
             "jugadores": [
                 {
-                    "nombre": "Marcelho Sánchulo",
+                    "nombre": "Lianel Guerrero",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
-                    "arq": 2.0,
-                    "edad": 34,
-                    "precio": 600
+                    "arq": 4.0,
+                    "edad": 26,
+                    "precio": 800
                 },
                 {
-                    "nombre": "Cuadrabo Ramírez",
-                    "fis": 1.0,
-                    "tec": 2.0,
-                    "defe": 1.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 31,
-                    "precio": 600
-                },
-                {
-                    "nombre": "Tevéz Díazco",
-                    "fis": 1.0,
-                    "tec": 2.0,
-                    "defe": 3.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 27,
-                    "precio": 900
-                },
-                {
-                    "nombre": "Cuadrabo Díazco",
-                    "fis": 4.0,
-                    "tec": 4.0,
+                    "nombre": "Ronaldiño Herrerita",
+                    "fis": 3.0,
+                    "tec": 3.0,
                     "defe": 4.0,
                     "men": 2.0,
                     "arq": 1.0,
                     "edad": 25,
-                    "precio": 1500
+                    "precio": 1300
                 },
                 {
-                    "nombre": "Kaká Vidal",
+                    "nombre": "Marcelho Rodriguito",
                     "fis": 4.0,
-                    "tec": 2.0,
-                    "defe": 1.0,
-                    "men": 1.0,
+                    "tec": 4.0,
+                    "defe": 4.0,
+                    "men": 4.0,
                     "arq": 1.0,
-                    "edad": 28,
+                    "edad": 24,
+                    "precio": 1700
+                },
+                {
+                    "nombre": "Falcao Cuevitas",
+                    "fis": 3.0,
+                    "tec": 1.0,
+                    "defe": 2.0,
+                    "men": 2.0,
+                    "arq": 1.0,
+                    "edad": 33,
                     "precio": 900
                 },
                 {
-                    "nombre": "Higuaín Ramírez",
-                    "fis": 2.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
+                    "nombre": "Arturo Vidal",
+                    "fis": 1.0,
+                    "tec": 3.0,
+                    "defe": 2.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 19,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Ronaldiño Rodriguito",
+                    "fis": 4.0,
+                    "tec": 3.0,
+                    "defe": 2.0,
                     "men": 2.0,
                     "arq": 1.0,
-                    "edad": 30,
+                    "edad": 23,
                     "precio": 1200
                 },
                 {
-                    "nombre": "Palermo Herrerita",
-                    "fis": 2.0,
-                    "tec": 1.0,
-                    "defe": 1.0,
+                    "nombre": "Robiniho Farfánez",
+                    "fis": 1.0,
+                    "tec": 4.0,
+                    "defe": 3.0,
                     "men": 4.0,
                     "arq": 1.0,
-                    "edad": 32,
-                    "precio": 900
+                    "edad": 24,
+                    "precio": 1300
                 },
                 {
-                    "nombre": "Lianel Herrerita",
-                    "fis": 4.0,
+                    "nombre": "Marcelho Zapatazo",
+                    "fis": 1.0,
                     "tec": 1.0,
+                    "defe": 2.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 27,
+                    "precio": 800
+                },
+                {
+                    "nombre": "Arturo Zapatazo",
+                    "fis": 1.0,
+                    "tec": 3.0,
+                    "defe": 1.0,
+                    "men": 2.0,
+                    "arq": 1.0,
+                    "edad": 31,
+                    "precio": 800
+                },
+                {
+                    "nombre": "Kaká Díazco",
+                    "fis": 3.0,
+                    "tec": 4.0,
                     "defe": 4.0,
                     "men": 1.0,
                     "arq": 1.0,
-                    "edad": 31,
-                    "precio": 1100
+                    "edad": 27,
+                    "precio": 1300
                 },
                 {
-                    "nombre": "Marcelho Messido",
-                    "fis": 1.0,
+                    "nombre": "Riquelme Guerrero",
+                    "fis": 3.0,
                     "tec": 4.0,
                     "defe": 4.0,
-                    "men": 4.0,
+                    "men": 2.0,
                     "arq": 1.0,
-                    "edad": 33,
+                    "edad": 30,
                     "precio": 1400
-                },
-                {
-                    "nombre": "Kaká Suárez",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
-                    "arq": 1.0,
-                    "edad": 27,
-                    "precio": 500
-                },
-                {
-                    "nombre": "Aimar Ramírez",
-                    "fis": 1.0,
-                    "tec": 1.0,
-                    "defe": 4.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 28,
-                    "precio": 1100
                 }
             ]
         },
@@ -235,114 +235,114 @@
             "nombre": "Milán AC",
             "jugadores": [
                 {
-                    "nombre": "Aimar Farfánez",
+                    "nombre": "Chupete Messido",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
                     "arq": 4.0,
-                    "edad": 23,
+                    "edad": 29,
                     "precio": 800
                 },
                 {
-                    "nombre": "Chupete Ramírez",
+                    "nombre": "Tevéz Díazco",
                     "fis": 3.0,
                     "tec": 4.0,
-                    "defe": 1.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 23,
-                    "precio": 1200
-                },
-                {
-                    "nombre": "Palermo Zapatazo",
-                    "fis": 2.0,
-                    "tec": 1.0,
                     "defe": 2.0,
                     "men": 2.0,
                     "arq": 1.0,
-                    "edad": 30,
-                    "precio": 800
+                    "edad": 35,
+                    "precio": 1200
                 },
                 {
-                    "nombre": "Aimar Flores",
+                    "nombre": "Chupete Díazco",
                     "fis": 2.0,
                     "tec": 3.0,
-                    "defe": 2.0,
+                    "defe": 4.0,
                     "men": 1.0,
                     "arq": 1.0,
-                    "edad": 32,
-                    "precio": 900
+                    "edad": 28,
+                    "precio": 1100
                 },
                 {
-                    "nombre": "Falcao Herrerita",
-                    "fis": 2.0,
+                    "nombre": "Robiniho Vidal",
+                    "fis": 3.0,
                     "tec": 3.0,
                     "defe": 1.0,
-                    "men": 3.0,
+                    "men": 2.0,
                     "arq": 1.0,
                     "edad": 18,
                     "precio": 1000
                 },
                 {
-                    "nombre": "Palermo Díazco",
-                    "fis": 1.0,
-                    "tec": 3.0,
-                    "defe": 1.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 22,
-                    "precio": 700
-                },
-                {
-                    "nombre": "Higuaín Moreno",
-                    "fis": 3.0,
-                    "tec": 2.0,
-                    "defe": 4.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 26,
-                    "precio": 1200
-                },
-                {
-                    "nombre": "Higuaín Herrerita",
-                    "fis": 4.0,
-                    "tec": 1.0,
-                    "defe": 3.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 28,
-                    "precio": 1000
-                },
-                {
-                    "nombre": "Varguitas Guerrero",
+                    "nombre": "Varguitas Rodriguito",
                     "fis": 2.0,
                     "tec": 3.0,
                     "defe": 4.0,
                     "men": 2.0,
                     "arq": 1.0,
-                    "edad": 24,
+                    "edad": 18,
                     "precio": 1200
                 },
                 {
-                    "nombre": "Tevéz Herrerita",
-                    "fis": 3.0,
-                    "tec": 4.0,
+                    "nombre": "Falcao Messido",
+                    "fis": 1.0,
+                    "tec": 3.0,
                     "defe": 2.0,
-                    "men": 4.0,
+                    "men": 3.0,
                     "arq": 1.0,
-                    "edad": 23,
-                    "precio": 1400
+                    "edad": 21,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Chupete Guerrero",
+                    "fis": 1.0,
+                    "tec": 1.0,
+                    "defe": 3.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 31,
+                    "precio": 700
                 },
                 {
                     "nombre": "Aimar Díazco",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
+                    "fis": 3.0,
+                    "tec": 4.0,
+                    "defe": 4.0,
+                    "men": 1.0,
                     "arq": 1.0,
-                    "edad": 34,
-                    "precio": 500
+                    "edad": 17,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Chupete Cuevitas",
+                    "fis": 3.0,
+                    "tec": 2.0,
+                    "defe": 2.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 25,
+                    "precio": 1100
+                },
+                {
+                    "nombre": "Varguitas Vidal",
+                    "fis": 2.0,
+                    "tec": 2.0,
+                    "defe": 4.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 31,
+                    "precio": 1200
+                },
+                {
+                    "nombre": "Higuaín Ramírez",
+                    "fis": 2.0,
+                    "tec": 1.0,
+                    "defe": 1.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 23,
+                    "precio": 600
                 }
             ]
         },
@@ -350,114 +350,114 @@
             "nombre": "Real Mandril",
             "jugadores": [
                 {
-                    "nombre": "Varguitas Herrerita",
+                    "nombre": "Chupete Moreno",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
                     "arq": 3.0,
-                    "edad": 22,
+                    "edad": 34,
                     "precio": 700
                 },
                 {
-                    "nombre": "Robiniho Suárez",
-                    "fis": 4.0,
-                    "tec": 4.0,
-                    "defe": 2.0,
+                    "nombre": "Arturo Messido",
+                    "fis": 3.0,
+                    "tec": 3.0,
+                    "defe": 3.0,
                     "men": 2.0,
                     "arq": 1.0,
                     "edad": 24,
-                    "precio": 1300
+                    "precio": 1200
                 },
                 {
-                    "nombre": "Tevéz Vidal",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
+                    "nombre": "Kaká Rodriguito",
+                    "fis": 4.0,
+                    "tec": 1.0,
+                    "defe": 4.0,
+                    "men": 1.0,
                     "arq": 1.0,
-                    "edad": 29,
+                    "edad": 30,
+                    "precio": 1100
+                },
+                {
+                    "nombre": "Lianel Moreno",
+                    "fis": 1.0,
+                    "tec": 1.0,
+                    "defe": 1.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 32,
                     "precio": 500
                 },
                 {
-                    "nombre": "Varguitas Cavaniño",
+                    "nombre": "Lianel Messido",
+                    "fis": 3.0,
+                    "tec": 3.0,
+                    "defe": 3.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 27,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Arturo Moreno",
+                    "fis": 1.0,
+                    "tec": 1.0,
+                    "defe": 1.0,
+                    "men": 2.0,
+                    "arq": 1.0,
+                    "edad": 35,
+                    "precio": 600
+                },
+                {
+                    "nombre": "Chupete Ramírez",
                     "fis": 2.0,
                     "tec": 3.0,
-                    "defe": 2.0,
+                    "defe": 3.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 32,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Marcelho Guerrero",
+                    "fis": 1.0,
+                    "tec": 1.0,
+                    "defe": 4.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 34,
+                    "precio": 1100
+                },
+                {
+                    "nombre": "Lianel Farfánez",
+                    "fis": 1.0,
+                    "tec": 4.0,
+                    "defe": 1.0,
                     "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 29,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Palermo Zapatazo",
+                    "fis": 2.0,
+                    "tec": 3.0,
+                    "defe": 3.0,
+                    "men": 2.0,
                     "arq": 1.0,
                     "edad": 26,
                     "precio": 1100
                 },
                 {
-                    "nombre": "Chupete Rodriguito",
-                    "fis": 2.0,
-                    "tec": 3.0,
-                    "defe": 2.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 21,
-                    "precio": 900
-                },
-                {
-                    "nombre": "Arturo Díazco",
-                    "fis": 3.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 20,
-                    "precio": 1500
-                },
-                {
-                    "nombre": "Tevéz Ramírez",
-                    "fis": 3.0,
-                    "tec": 1.0,
-                    "defe": 2.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 27,
-                    "precio": 1000
-                },
-                {
-                    "nombre": "Tevéz Messido",
-                    "fis": 3.0,
-                    "tec": 1.0,
-                    "defe": 2.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 30,
-                    "precio": 800
-                },
-                {
-                    "nombre": "Arturo Vidal",
-                    "fis": 4.0,
-                    "tec": 4.0,
-                    "defe": 2.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 29,
-                    "precio": 1300
-                },
-                {
-                    "nombre": "Kaká Vidal",
+                    "nombre": "Marcelho Cuevitas",
                     "fis": 1,
                     "tec": 1,
                     "defe": 1,
                     "men": 1,
                     "arq": 1.0,
-                    "edad": 28,
+                    "edad": 21,
                     "precio": 500
-                },
-                {
-                    "nombre": "Kaká Sánchulo",
-                    "fis": 2.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 32,
-                    "precio": 1200
                 }
             ]
         },
@@ -465,114 +465,114 @@
             "nombre": "Boca Jrs",
             "jugadores": [
                 {
-                    "nombre": "Higuaín Vidal",
+                    "nombre": "Cuadrabo Cavaniño",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
                     "arq": 2.0,
-                    "edad": 20,
+                    "edad": 21,
                     "precio": 600
                 },
                 {
-                    "nombre": "Ronaldiño Ramírez",
-                    "fis": 1.0,
-                    "tec": 3.0,
-                    "defe": 4.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 30,
-                    "precio": 1200
-                },
-                {
-                    "nombre": "Riquelme Guerrero",
-                    "fis": 1.0,
-                    "tec": 1.0,
-                    "defe": 2.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 25,
-                    "precio": 700
-                },
-                {
-                    "nombre": "Tevéz Cuevitas",
-                    "fis": 4.0,
+                    "nombre": "Marcelho Messido",
+                    "fis": 2.0,
                     "tec": 1.0,
                     "defe": 1.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 31,
-                    "precio": 1100
-                },
-                {
-                    "nombre": "Falcao Sánchulo",
-                    "fis": 4.0,
-                    "tec": 1.0,
-                    "defe": 2.0,
                     "men": 1.0,
                     "arq": 1.0,
                     "edad": 19,
-                    "precio": 900
+                    "precio": 600
                 },
                 {
-                    "nombre": "Varguitas Ramírez",
-                    "fis": 2.0,
-                    "tec": 3.0,
-                    "defe": 2.0,
-                    "men": 2.0,
+                    "nombre": "Cuadrabo Sánchulo",
+                    "fis": 1.0,
+                    "tec": 1.0,
+                    "defe": 4.0,
+                    "men": 4.0,
                     "arq": 1.0,
-                    "edad": 30,
-                    "precio": 1000
+                    "edad": 18,
+                    "precio": 1100
                 },
                 {
-                    "nombre": "Riquelme Sánchulo",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
-                    "arq": 1.0,
-                    "edad": 35,
-                    "precio": 500
-                },
-                {
-                    "nombre": "Lianel Flores",
-                    "fis": 4.0,
-                    "tec": 2.0,
+                    "nombre": "Cuadrabo Ramírez",
+                    "fis": 3.0,
+                    "tec": 1.0,
                     "defe": 1.0,
                     "men": 2.0,
                     "arq": 1.0,
-                    "edad": 25,
+                    "edad": 31,
+                    "precio": 800
+                },
+                {
+                    "nombre": "Kaká Guerrero",
+                    "fis": 1.0,
+                    "tec": 4.0,
+                    "defe": 3.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 20,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Falcao Cavaniño",
+                    "fis": 3.0,
+                    "tec": 1.0,
+                    "defe": 4.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 22,
                     "precio": 1000
                 },
                 {
-                    "nombre": "Riquelme Cavaniño",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
-                    "arq": 1.0,
-                    "edad": 28,
-                    "precio": 500
-                },
-                {
-                    "nombre": "Falcao Ramírez",
-                    "fis": 3.0,
-                    "tec": 3.0,
-                    "defe": 2.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 26,
-                    "precio": 1200
-                },
-                {
-                    "nombre": "Ronaldiño Flores",
-                    "fis": 3.0,
+                    "nombre": "Lianel Rodriguito",
+                    "fis": 1.0,
                     "tec": 1.0,
                     "defe": 3.0,
                     "men": 1.0,
                     "arq": 1.0,
-                    "edad": 18,
-                    "precio": 900
+                    "edad": 26,
+                    "precio": 700
+                },
+                {
+                    "nombre": "Marcelho Cavaniño",
+                    "fis": 2.0,
+                    "tec": 4.0,
+                    "defe": 3.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 19,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Robiniho Farfánez",
+                    "fis": 2.0,
+                    "tec": 2.0,
+                    "defe": 3.0,
+                    "men": 2.0,
+                    "arq": 1.0,
+                    "edad": 35,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Robiniho Messido",
+                    "fis": 4.0,
+                    "tec": 3.0,
+                    "defe": 2.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 17,
+                    "precio": 1400
+                },
+                {
+                    "nombre": "Cuadrabo Herrerita",
+                    "fis": 1.0,
+                    "tec": 3.0,
+                    "defe": 2.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 31,
+                    "precio": 1000
                 }
             ]
         },
@@ -580,114 +580,114 @@
             "nombre": "Colo Colo Dummy",
             "jugadores": [
                 {
-                    "nombre": "Falcao Rodriguito",
+                    "nombre": "Lianel Vidal",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
                     "arq": 2.0,
-                    "edad": 30,
+                    "edad": 18,
                     "precio": 600
                 },
                 {
-                    "nombre": "Palermo Messido",
-                    "fis": 3.0,
+                    "nombre": "Aimar Suárez",
+                    "fis": 4.0,
                     "tec": 4.0,
-                    "defe": 4.0,
-                    "men": 2.0,
+                    "defe": 3.0,
+                    "men": 4.0,
                     "arq": 1.0,
                     "edad": 24,
-                    "precio": 1400
+                    "precio": 1600
                 },
                 {
-                    "nombre": "Varguitas Rodriguito",
-                    "fis": 4.0,
-                    "tec": 1.0,
-                    "defe": 3.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 19,
-                    "precio": 1100
-                },
-                {
-                    "nombre": "Marcelho Farfánez",
+                    "nombre": "Falcao Messido",
                     "fis": 3.0,
-                    "tec": 2.0,
+                    "tec": 3.0,
+                    "defe": 3.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 30,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Falcao Suárez",
+                    "fis": 3.0,
+                    "tec": 4.0,
                     "defe": 1.0,
                     "men": 2.0,
                     "arq": 1.0,
-                    "edad": 19,
-                    "precio": 900
+                    "edad": 33,
+                    "precio": 1100
                 },
                 {
-                    "nombre": "Arturo Guerrero",
+                    "nombre": "Varguitas Suárez",
                     "fis": 1.0,
-                    "tec": 1.0,
-                    "defe": 4.0,
-                    "men": 2.0,
+                    "tec": 4.0,
+                    "defe": 3.0,
+                    "men": 3.0,
                     "arq": 1.0,
-                    "edad": 26,
-                    "precio": 900
+                    "edad": 18,
+                    "precio": 1200
                 },
                 {
-                    "nombre": "Chupete Herrerita",
-                    "fis": 2.0,
-                    "tec": 4.0,
-                    "defe": 2.0,
-                    "men": 1.0,
+                    "nombre": "Marcelho Rodriguito",
+                    "fis": 1.0,
+                    "tec": 3.0,
+                    "defe": 1.0,
+                    "men": 4.0,
                     "arq": 1.0,
-                    "edad": 35,
+                    "edad": 32,
                     "precio": 1000
                 },
                 {
-                    "nombre": "Higuaín Suárez",
+                    "nombre": "Cuadrabo Rodriguito",
                     "fis": 1.0,
-                    "tec": 1.0,
+                    "tec": 3.0,
                     "defe": 4.0,
                     "men": 4.0,
                     "arq": 1.0,
-                    "edad": 18,
-                    "precio": 1100
+                    "edad": 35,
+                    "precio": 1300
                 },
                 {
-                    "nombre": "Marcelho Ramírez",
+                    "nombre": "Palermo Suárez",
                     "fis": 2.0,
+                    "tec": 4.0,
+                    "defe": 1.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 27,
+                    "precio": 1200
+                },
+                {
+                    "nombre": "Varguitas Herrerita",
+                    "fis": 3.0,
+                    "tec": 4.0,
+                    "defe": 4.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 25,
+                    "precio": 1300
+                },
+                {
+                    "nombre": "Robiniho Farfánez",
+                    "fis": 4.0,
+                    "tec": 2.0,
+                    "defe": 1.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 32,
+                    "precio": 900
+                },
+                {
+                    "nombre": "Robiniho Moreno",
+                    "fis": 4.0,
                     "tec": 4.0,
                     "defe": 4.0,
                     "men": 2.0,
                     "arq": 1.0,
-                    "edad": 34,
-                    "precio": 1300
-                },
-                {
-                    "nombre": "Lianel Moreno",
-                    "fis": 2.0,
-                    "tec": 3.0,
-                    "defe": 4.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 28,
-                    "precio": 1100
-                },
-                {
-                    "nombre": "Ronaldiño Messido",
-                    "fis": 1.0,
-                    "tec": 1.0,
-                    "defe": 2.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 34,
-                    "precio": 900
-                },
-                {
-                    "nombre": "Ronaldiño Guerrero",
-                    "fis": 4.0,
-                    "tec": 2.0,
-                    "defe": 4.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 21,
-                    "precio": 1300
+                    "edad": 31,
+                    "precio": 1500
                 }
             ]
         },
@@ -695,114 +695,114 @@
             "nombre": "U de Chile RC",
             "jugadores": [
                 {
-                    "nombre": "Marcelho Herrerita",
+                    "nombre": "Falcao Moreno",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
-                    "arq": 4.0,
-                    "edad": 28,
+                    "arq": 2.0,
+                    "edad": 29,
+                    "precio": 600
+                },
+                {
+                    "nombre": "Ronaldiño Herrerita",
+                    "fis": 1.0,
+                    "tec": 2.0,
+                    "defe": 4.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 26,
+                    "precio": 1200
+                },
+                {
+                    "nombre": "Robiniho Guerrero",
+                    "fis": 4.0,
+                    "tec": 4.0,
+                    "defe": 4.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 26,
+                    "precio": 1600
+                },
+                {
+                    "nombre": "Tevéz Suárez",
+                    "fis": 1.0,
+                    "tec": 2.0,
+                    "defe": 2.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 30,
+                    "precio": 700
+                },
+                {
+                    "nombre": "Robiniho Cavaniño",
+                    "fis": 4.0,
+                    "tec": 1.0,
+                    "defe": 1.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 22,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Marcelho Suárez",
+                    "fis": 1.0,
+                    "tec": 4.0,
+                    "defe": 1.0,
+                    "men": 1.0,
+                    "arq": 1.0,
+                    "edad": 25,
                     "precio": 800
                 },
                 {
-                    "nombre": "Higuaín Cuevitas",
+                    "nombre": "Cuadrabo Suárez",
                     "fis": 1,
                     "tec": 1,
                     "defe": 1,
                     "men": 1,
                     "arq": 1.0,
-                    "edad": 33,
+                    "edad": 31,
                     "precio": 500
                 },
                 {
-                    "nombre": "Tevéz Messido",
-                    "fis": 2.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 22,
-                    "precio": 1400
-                },
-                {
-                    "nombre": "Lianel Cuevitas",
-                    "fis": 1.0,
-                    "tec": 3.0,
-                    "defe": 1.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 17,
-                    "precio": 900
-                },
-                {
-                    "nombre": "Ronaldiño Messido",
-                    "fis": 1.0,
-                    "tec": 4.0,
-                    "defe": 2.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 33,
-                    "precio": 1000
-                },
-                {
-                    "nombre": "Lianel Flores",
-                    "fis": 1.0,
-                    "tec": 2.0,
-                    "defe": 3.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 24,
-                    "precio": 1000
-                },
-                {
-                    "nombre": "Varguitas Guerrero",
-                    "fis": 3.0,
-                    "tec": 4.0,
-                    "defe": 2.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 25,
-                    "precio": 1100
-                },
-                {
-                    "nombre": "Higuaín Guerrero",
-                    "fis": 3.0,
-                    "tec": 2.0,
-                    "defe": 2.0,
-                    "men": 2.0,
-                    "arq": 1.0,
-                    "edad": 22,
-                    "precio": 1000
-                },
-                {
-                    "nombre": "Higuaín Cavaniño",
-                    "fis": 3.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 34,
-                    "precio": 1500
-                },
-                {
-                    "nombre": "Cuadrabo Ramírez",
-                    "fis": 1.0,
+                    "nombre": "Varguitas Herrerita",
+                    "fis": 4.0,
                     "tec": 3.0,
                     "defe": 4.0,
                     "men": 3.0,
                     "arq": 1.0,
-                    "edad": 30,
-                    "precio": 1200
+                    "edad": 31,
+                    "precio": 1500
                 },
                 {
-                    "nombre": "Riquelme Farfánez",
-                    "fis": 4.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
-                    "men": 2.0,
+                    "nombre": "Kaká Cavaniño",
+                    "fis": 1,
+                    "tec": 1,
+                    "defe": 1,
+                    "men": 1,
                     "arq": 1.0,
-                    "edad": 33,
-                    "precio": 1400
+                    "edad": 19,
+                    "precio": 500
+                },
+                {
+                    "nombre": "Aimar Ramírez",
+                    "fis": 2.0,
+                    "tec": 2.0,
+                    "defe": 2.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 29,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Cuadrabo Guerrero",
+                    "fis": 4.0,
+                    "tec": 1.0,
+                    "defe": 3.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 18,
+                    "precio": 1300
                 }
             ]
         },
@@ -810,113 +810,113 @@
             "nombre": "Deportivo Conceptivo",
             "jugadores": [
                 {
-                    "nombre": "Chupete Vidal",
+                    "nombre": "Robiniho Rodriguito",
                     "fis": 1.0,
                     "tec": 1.0,
                     "defe": 1.0,
                     "men": 1.0,
-                    "arq": 2.0,
-                    "edad": 28,
-                    "precio": 600
+                    "arq": 4.0,
+                    "edad": 31,
+                    "precio": 800
                 },
                 {
-                    "nombre": "Palermo Zapatazo",
+                    "nombre": "Cuadrabo Guerrero",
                     "fis": 2.0,
                     "tec": 2.0,
+                    "defe": 2.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 20,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Chupete Ramírez",
+                    "fis": 2.0,
+                    "tec": 1.0,
                     "defe": 4.0,
                     "men": 4.0,
                     "arq": 1.0,
-                    "edad": 25,
-                    "precio": 1300
+                    "edad": 20,
+                    "precio": 1200
                 },
                 {
-                    "nombre": "Varguitas Cuevitas",
+                    "nombre": "Robiniho Vidal",
+                    "fis": 1,
+                    "tec": 1,
+                    "defe": 1,
+                    "men": 1,
+                    "arq": 1.0,
+                    "edad": 28,
+                    "precio": 500
+                },
+                {
+                    "nombre": "Riquelme Messido",
                     "fis": 4.0,
+                    "tec": 4.0,
+                    "defe": 4.0,
+                    "men": 2.0,
+                    "arq": 1.0,
+                    "edad": 32,
+                    "precio": 1500
+                },
+                {
+                    "nombre": "Chupete Díazco",
+                    "fis": 1.0,
+                    "tec": 3.0,
+                    "defe": 1.0,
+                    "men": 4.0,
+                    "arq": 1.0,
+                    "edad": 28,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Riquelme Cuevitas",
+                    "fis": 4.0,
+                    "tec": 1.0,
+                    "defe": 3.0,
+                    "men": 2.0,
+                    "arq": 1.0,
+                    "edad": 18,
+                    "precio": 1100
+                },
+                {
+                    "nombre": "Varguitas Díazco",
+                    "fis": 1.0,
+                    "tec": 1.0,
+                    "defe": 4.0,
+                    "men": 3.0,
+                    "arq": 1.0,
+                    "edad": 25,
+                    "precio": 1000
+                },
+                {
+                    "nombre": "Arturo Sánchulo",
+                    "fis": 3.0,
                     "tec": 2.0,
                     "defe": 2.0,
                     "men": 4.0,
                     "arq": 1.0,
-                    "edad": 24,
-                    "precio": 1300
-                },
-                {
-                    "nombre": "Marcelho Suárez",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
-                    "arq": 1.0,
                     "edad": 21,
-                    "precio": 500
+                    "precio": 1200
                 },
                 {
-                    "nombre": "Lianel Herrerita",
+                    "nombre": "Marcelho Farfánez",
                     "fis": 1.0,
-                    "tec": 4.0,
-                    "defe": 4.0,
+                    "tec": 3.0,
+                    "defe": 1.0,
                     "men": 4.0,
                     "arq": 1.0,
-                    "edad": 27,
-                    "precio": 1400
+                    "edad": 22,
+                    "precio": 1000
                 },
                 {
-                    "nombre": "Lianel Flores",
-                    "fis": 4.0,
-                    "tec": 4.0,
-                    "defe": 3.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 21,
-                    "precio": 1300
-                },
-                {
-                    "nombre": "Chupete Vidal",
-                    "fis": 1.0,
-                    "tec": 4.0,
-                    "defe": 1.0,
-                    "men": 1.0,
-                    "arq": 1.0,
-                    "edad": 32,
-                    "precio": 800
-                },
-                {
-                    "nombre": "Palermo Farfánez",
-                    "fis": 2.0,
-                    "tec": 1.0,
-                    "defe": 1.0,
-                    "men": 3.0,
-                    "arq": 1.0,
-                    "edad": 29,
-                    "precio": 800
-                },
-                {
-                    "nombre": "Lianel Messido",
-                    "fis": 1,
-                    "tec": 1,
-                    "defe": 1,
-                    "men": 1,
-                    "arq": 1.0,
-                    "edad": 32,
-                    "precio": 500
-                },
-                {
-                    "nombre": "Riquelme Rodriguito",
+                    "nombre": "Falcao Zapatazo",
                     "fis": 4.0,
                     "tec": 1.0,
-                    "defe": 3.0,
-                    "men": 4.0,
-                    "arq": 1.0,
-                    "edad": 32,
-                    "precio": 1300
-                },
-                {
-                    "nombre": "Riquelme Rodriguito",
-                    "fis": 2.0,
-                    "tec": 2.0,
                     "defe": 4.0,
-                    "men": 2.0,
+                    "men": 1.0,
                     "arq": 1.0,
-                    "edad": 33,
+                    "edad": 19,
                     "precio": 1100
                 }
             ]
@@ -925,7 +925,7 @@
     "fixture": {
         "1": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "Deportivo Conceptivo"
             ],
             [
@@ -944,7 +944,7 @@
         "8": [
             [
                 "Deportivo Conceptivo",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "U de Chile RC",
@@ -961,7 +961,7 @@
         ],
         "2": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "U de Chile RC"
             ],
             [
@@ -980,7 +980,7 @@
         "9": [
             [
                 "U de Chile RC",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "Colo Colo Dummy",
@@ -997,7 +997,7 @@
         ],
         "3": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "Colo Colo Dummy"
             ],
             [
@@ -1016,7 +1016,7 @@
         "10": [
             [
                 "Colo Colo Dummy",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "Boca Jrs",
@@ -1033,7 +1033,7 @@
         ],
         "4": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "Boca Jrs"
             ],
             [
@@ -1052,7 +1052,7 @@
         "11": [
             [
                 "Boca Jrs",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "Real Mandril",
@@ -1069,7 +1069,7 @@
         ],
         "5": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "Real Mandril"
             ],
             [
@@ -1088,7 +1088,7 @@
         "12": [
             [
                 "Real Mandril",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "Milán AC",
@@ -1105,7 +1105,7 @@
         ],
         "6": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "Milán AC"
             ],
             [
@@ -1124,7 +1124,7 @@
         "13": [
             [
                 "Milán AC",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "Sporting de Lisboa",
@@ -1141,7 +1141,7 @@
         ],
         "7": [
             [
-                "Universidad Monjolica",
+                "Pencas",
                 "Sporting de Lisboa"
             ],
             [
@@ -1160,7 +1160,7 @@
         "14": [
             [
                 "Sporting de Lisboa",
-                "Universidad Monjolica"
+                "Pencas"
             ],
             [
                 "Deportivo Conceptivo",
@@ -1176,87 +1176,87 @@
             ]
         ]
     },
-    "fecha_actual": 15,
+    "fecha_actual": 2,
     "tabla": {
-        "Universidad Monjolica": {
-            "PJ": 14,
-            "PG": 4,
-            "PE": 6,
-            "PP": 4,
-            "GF": 19,
-            "GC": 17,
-            "DG": 2,
-            "PTS": 18
+        "Pencas": {
+            "PJ": 1,
+            "PG": 1,
+            "PE": 0,
+            "PP": 0,
+            "GF": 1,
+            "GC": 0,
+            "DG": 1,
+            "PTS": 3
         },
         "Sporting de Lisboa": {
-            "PJ": 14,
-            "PG": 2,
-            "PE": 4,
-            "PP": 8,
-            "GF": 17,
-            "GC": 26,
-            "DG": -9,
-            "PTS": 10
+            "PJ": 1,
+            "PG": 1,
+            "PE": 0,
+            "PP": 0,
+            "GF": 3,
+            "GC": 0,
+            "DG": 3,
+            "PTS": 3
         },
         "Milán AC": {
-            "PJ": 14,
-            "PG": 5,
-            "PE": 3,
-            "PP": 6,
-            "GF": 17,
-            "GC": 21,
-            "DG": -4,
-            "PTS": 18
+            "PJ": 1,
+            "PG": 0,
+            "PE": 1,
+            "PP": 0,
+            "GF": 1,
+            "GC": 1,
+            "DG": 0,
+            "PTS": 1
         },
         "Real Mandril": {
-            "PJ": 14,
-            "PG": 5,
-            "PE": 4,
-            "PP": 5,
-            "GF": 13,
-            "GC": 17,
-            "DG": -4,
-            "PTS": 19
+            "PJ": 1,
+            "PG": 1,
+            "PE": 0,
+            "PP": 0,
+            "GF": 2,
+            "GC": 0,
+            "DG": 2,
+            "PTS": 3
         },
         "Boca Jrs": {
-            "PJ": 14,
-            "PG": 5,
-            "PE": 5,
-            "PP": 4,
-            "GF": 20,
-            "GC": 19,
-            "DG": 1,
-            "PTS": 20
+            "PJ": 1,
+            "PG": 0,
+            "PE": 0,
+            "PP": 1,
+            "GF": 0,
+            "GC": 2,
+            "DG": -2,
+            "PTS": 0
         },
         "Colo Colo Dummy": {
-            "PJ": 14,
-            "PG": 6,
-            "PE": 5,
-            "PP": 3,
-            "GF": 20,
-            "GC": 12,
-            "DG": 8,
-            "PTS": 23
+            "PJ": 1,
+            "PG": 0,
+            "PE": 1,
+            "PP": 0,
+            "GF": 1,
+            "GC": 1,
+            "DG": 0,
+            "PTS": 1
         },
         "U de Chile RC": {
-            "PJ": 14,
-            "PG": 5,
-            "PE": 6,
-            "PP": 3,
-            "GF": 19,
-            "GC": 15,
-            "DG": 4,
-            "PTS": 21
+            "PJ": 1,
+            "PG": 0,
+            "PE": 0,
+            "PP": 1,
+            "GF": 0,
+            "GC": 3,
+            "DG": -3,
+            "PTS": 0
         },
         "Deportivo Conceptivo": {
-            "PJ": 14,
-            "PG": 6,
-            "PE": 3,
-            "PP": 5,
-            "GF": 21,
-            "GC": 19,
-            "DG": 2,
-            "PTS": 21
+            "PJ": 1,
+            "PG": 0,
+            "PE": 0,
+            "PP": 1,
+            "GF": 0,
+            "GC": 1,
+            "DG": -1,
+            "PTS": 0
         }
     }
 }

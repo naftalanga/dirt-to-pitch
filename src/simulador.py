@@ -1,8 +1,8 @@
-import random
-from motor_core import Jugador, Equipo, calcular_poder_zonas
+# simulador.py — re-exporta simular_partido desde motor_core (backward-compat)
+from motor_core import Jugador, Equipo, simular_partido  # noqa: F401
 
 
-def simular_partido(
+def _legacy_simular_partido(
     equipo_local: Equipo,
     form_local: str,
     equipo_visita: Equipo,
