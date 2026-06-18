@@ -1,7 +1,9 @@
 import sys
+import random
 from db_manager import cargar_partida, guardar_partida
 from motor_core import simular_partido
-from liga import imprimir_tabla, inicializar_tabla, actualizar_tabla
+from liga import imprimir_tabla, inicializar_tabla, actualizar_tabla, generar_fixture
+from generador import generar_equipo_rival, NOMBRES_EQUIPOS
 
 # ---------------------------------------------------------------------------
 # Constantes de táctica
@@ -16,14 +18,14 @@ ESTILOS_DISPONIBLES = ["Defensivo", "Equilibrado", "Ofensivo"]
 # Escala de premios por posición final (1° a 8°)
 # ---------------------------------------------------------------------------
 PREMIOS_POSICION = {
-    1: 2000,
-    2: 1500,
-    3: 1000,
-    4:  800,
-    5:  600,
-    6:  400,
-    7:  200,
-    8:  100,
+    1: 40000,
+    2: 30000,
+    3: 20000,
+    4: 16000,
+    5: 12000,
+    6:  8000,
+    7:  4000,
+    8:  2000,
 }
 
 # ---------------------------------------------------------------------------
@@ -166,16 +168,62 @@ while True:
             print(f"  Caja tras premio  : ${partida['caja']}")
             print("=" * 56)
 
-            # --- Placeholder próximo sprint: reinicio de temporada ---
+            # --- Ascenso / Descenso / Permanencia ---
+            division_anterior = partida["division_actual"]
+
+            if posicion_final <= 2:
+                partida["division_actual"] = max(1, division_anterior - 1)
+                if partida["division_actual"] < division_anterior:
+                    print()
+                    print("  🎉🚀 ¡¡ASCENSO!! 🚀🎉")
+                    print(f"  ¡{nombre_jugador} sube a la División {partida['division_actual']}!")
+                    print("  El sacrificio y la gloria os esperan en la élite.")
+                else:
+                    print()
+                    print("  🏆 ¡Ya estáis en la élite! Sois los reyes de la primera división.")
+
+            elif posicion_final >= 7:
+                partida["division_actual"] = min(3, division_anterior + 1)
+                if partida["division_actual"] > division_anterior:
+                    print()
+                    print("  💔 DESCENSO...")
+                    print(f"  {nombre_jugador} baja a la División {partida['division_actual']}.")
+                    print("  Toca reconstruir desde abajo. ¡Ánimo, mánager!")
+                else:
+                    print()
+                    print("  Ya estáis en el fondo. Peor no puede ir... ¿o sí?")
+
+            else:
+                print()
+                print("  🔵 PERMANENCIA asegurada.")
+                print(f"  {nombre_jugador} seguirá en la División {partida['division_actual']} la próxima temporada.")
+
+            print("=" * 56)
+
+            # --- Generar nueva temporada ---
+            nueva_division = partida["division_actual"]
+
+            NOMBRES_RIVALES = random.sample(NOMBRES_EQUIPOS, 7)
+            nuevos_rivales = [
+                generar_equipo_rival(nombre, division=nueva_division)
+                for nombre in NOMBRES_RIVALES
+            ]
+            partida["rivales"] = nuevos_rivales
+
+            # Actualizar lista combinada para el próximo bucle
+            todos_los_equipos.clear()
+            todos_los_equipos.extend([partida["equipo"]] + partida["rivales"])
+
+            todos_los_nombres = [e.nombre for e in todos_los_equipos]
+            partida["fixture"] = generar_fixture(todos_los_nombres)
+
+            partida["tabla"]           = inicializar_tabla(todos_los_nombres)
             partida["temporada_actual"] += 1
             partida["fecha_actual"]      = 1
-            for stats in partida["tabla"].values():
-                for clave in ("PJ", "PG", "PE", "PP", "GF", "GC", "DG", "PTS"):
-                    stats[clave] = 0
 
             guardar_partida(partida)
             print(f"\n  [INFO] Temporada {partida['temporada_actual'] - 1} archivada. "
-                  f"Comenzando Temporada {partida['temporada_actual']}...")
+                  f"Comenzando Temporada {partida['temporada_actual']} en Div {nueva_division}...")
             print("=" * 56)
 
     # --- Opción 4: Cambiar táctica ---

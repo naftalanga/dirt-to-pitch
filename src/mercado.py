@@ -1,11 +1,12 @@
 from motor_core import Equipo
-from generador import generar_jugador, generar_equipo_rival
+import random
+from generador import generar_jugador, generar_jugador_por_division, generar_equipo_rival, NOMBRES_EQUIPOS
 from db_manager import guardar_partida
 from liga import generar_fixture
 
 
-def draft_inicial(presupuesto: int = 15000) -> tuple:
-    mercado  = [generar_jugador("barro") for _ in range(20)]
+def draft_inicial(presupuesto: int = 200000, division: int = 3) -> tuple:
+    mercado  = [generar_jugador_por_division(division) for _ in range(20)]
     plantilla = []
     caja      = presupuesto
 
@@ -80,15 +81,7 @@ def draft_inicial(presupuesto: int = 15000) -> tuple:
 if __name__ == "__main__":
     equipo, caja = draft_inicial()
 
-    nombres_rivales = [
-        "Sporting de Lisboa",
-        "Milán AC",
-        "Real Mandril",
-        "Boca Jrs",
-        "Colo Colo Dummy",
-        "U de Chile RC",
-        "Deportivo Conceptivo",
-    ]
+    nombres_rivales = random.sample(NOMBRES_EQUIPOS, 7)
     lista_rivales = [generar_equipo_rival(n) for n in nombres_rivales]
 
     todos_los_nombres = [equipo.nombre] + nombres_rivales
