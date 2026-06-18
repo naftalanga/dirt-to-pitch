@@ -10,19 +10,22 @@ def guardar_partida(partida: dict) -> None:
     """
     Recibe el dict de estado completo de la partida y lo persiste en el JSON.
     Claves esperadas: equipo (Equipo), caja, rivales, fixture, fecha_actual,
-                      tabla, formacion_actual, estilo_actual.
+                      tabla, formacion_actual, estilo_actual,
+                      temporada_actual, division_actual.
     """
     os.makedirs("db", exist_ok=True)
     # Las claves del fixture son int en memoria pero JSON las convierte a str; se guardan como str.
     datos = {
-        "equipo":           asdict(partida["equipo"]),
-        "caja":             partida["caja"],
-        "rivales":          [asdict(r) for r in partida["rivales"]],
-        "fixture":          {str(k): v for k, v in partida["fixture"].items()},
-        "fecha_actual":     partida["fecha_actual"],
-        "tabla":            partida.get("tabla"),
-        "formacion_actual": partida.get("formacion_actual", "4-4-2"),
-        "estilo_actual":    partida.get("estilo_actual",    "Equilibrado"),
+        "equipo":            asdict(partida["equipo"]),
+        "caja":              partida["caja"],
+        "rivales":           [asdict(r) for r in partida["rivales"]],
+        "fixture":           {str(k): v for k, v in partida["fixture"].items()},
+        "fecha_actual":      partida["fecha_actual"],
+        "tabla":             partida.get("tabla"),
+        "formacion_actual":  partida.get("formacion_actual",  "4-4-2"),
+        "estilo_actual":     partida.get("estilo_actual",     "Equilibrado"),
+        "temporada_actual":  partida.get("temporada_actual",  1),
+        "division_actual":   partida.get("division_actual",   3),
     }
     with open(RUTA_DB, "w", encoding="utf-8") as f:
         json.dump(datos, f, indent=4, ensure_ascii=False)
@@ -52,9 +55,12 @@ def cargar_partida() -> dict | None:
     fixture      = {int(k): [tuple(p) for p in v] for k, v in fixture_raw.items()}
     fecha_actual = datos.get("fecha_actual", 1)
 
-    tabla            = datos.get("tabla")
-    formacion_actual = datos.get("formacion_actual", "4-4-2")
-    estilo_actual    = datos.get("estilo_actual",    "Equilibrado")
+    tabla             = datos.get("tabla")
+    formacion_actual  = datos.get("formacion_actual",  "4-4-2")
+    estilo_actual     = datos.get("estilo_actual",     "Equilibrado")
+    temporada_actual  = datos.get("temporada_actual",  1)
+    division_actual   = datos.get("division_actual",   3)
+    caja              = datos.get("caja",              0)
 
     print(f"[LOAD] Partida cargada: '{equipo.nombre}'  |  Caja: ${caja}  |  Rivales: {len(rivales)}  |  Fecha: {fecha_actual}")
 
@@ -67,6 +73,8 @@ def cargar_partida() -> dict | None:
         "tabla":            tabla,
         "formacion_actual": formacion_actual,
         "estilo_actual":    estilo_actual,
+        "temporada_actual": temporada_actual,
+        "division_actual":  division_actual,
     }
 
 

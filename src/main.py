@@ -13,6 +13,20 @@ FORMACIONES_DISPONIBLES = [
 ESTILOS_DISPONIBLES = ["Defensivo", "Equilibrado", "Ofensivo"]
 
 # ---------------------------------------------------------------------------
+# Escala de premios por posición final (1° a 8°)
+# ---------------------------------------------------------------------------
+PREMIOS_POSICION = {
+    1: 2000,
+    2: 1500,
+    3: 1000,
+    4:  800,
+    5:  600,
+    6:  400,
+    7:  200,
+    8:  100,
+}
+
+# ---------------------------------------------------------------------------
 # Carga de partida
 # ---------------------------------------------------------------------------
 partida = cargar_partida()
@@ -38,12 +52,22 @@ while True:
     formacion_actual = partida["formacion_actual"]
     estilo_actual    = partida["estilo_actual"]
 
+    fecha_actual     = partida["fecha_actual"]
+    temporada_actual = partida["temporada_actual"]
+    division_actual  = partida["division_actual"]
+
+    label_opcion_3 = (
+        f"Jugar Fecha {fecha_actual}"
+        if fecha_actual <= 14
+        else "Finalizar Temporada"
+    )
+
     print()
-    print("--- HUB DEL MÁNAGER ---")
-    print(f"Fecha Actual: {partida['fecha_actual']} / 14  |  Caja: ${partida['caja']}")
+    print(f"=== HUB DEL MÁNAGER | Temp: {temporada_actual} - Div: {division_actual} ===")
+    print(f"Fecha Actual: {fecha_actual} / 14  |  Caja: ${partida['caja']}")
     print("1. Ver mi Plantilla")
     print("2. Ver Tabla de Posiciones")
-    print(f"3. Jugar Fecha {partida['fecha_actual']}")
+    print(f"3. {label_opcion_3}")
     print(f"4. Cambiar Táctica          [Táctica actual: {formacion_actual} | {estilo_actual}]")
     print("5. Guardar y Salir")
     print()
@@ -68,11 +92,10 @@ while True:
     elif opcion == "2":
         imprimir_tabla(partida["tabla"])
 
-    # --- Opción 3: Jugar fecha ---
+    # --- Opción 3: Jugar Fecha / Finalizar Temporada ---
     elif opcion == "3":
-        if partida["fecha_actual"] > 14:
-            print("\n  La temporada ha finalizado. No hay más fechas por jugar.")
-        else:
+        if partida["fecha_actual"] <= 14:
+            # ---- Jugar la fecha ----
             partidos_fecha = partida["fixture"][partida["fecha_actual"]]
             print(f"\n  --- FECHA {partida['fecha_actual']} ---")
 
@@ -105,6 +128,55 @@ while True:
                 actualizar_tabla(partida["tabla"], nombre_local, goles_l, nombre_visita, goles_v)
 
             partida["fecha_actual"] += 1
+
+        else:
+            # ---- Finalizar Temporada ----
+            tabla_ordenada = sorted(
+                partida["tabla"].items(),
+                key=lambda x: (x[1]["PTS"], x[1]["DG"]),
+                reverse=True,
+            )
+
+            nombre_jugador = partida["equipo"].nombre
+            posicion_final = next(
+                (pos for pos, (nombre, _) in enumerate(tabla_ordenada, start=1)
+                 if nombre == nombre_jugador),
+                len(tabla_ordenada),
+            )
+            premio = PREMIOS_POSICION.get(posicion_final, 0)
+            partida["caja"] += premio
+
+            print()
+            print("=" * 56)
+            print("       *** FIN DE TEMPORADA ***")
+            print("=" * 56)
+            print(f"  Equipo   : {nombre_jugador}")
+            print(f"  Temporada: {partida['temporada_actual']}  |  División: {partida['division_actual']}")
+            print()
+            print("  CLASIFICACIÓN FINAL:")
+            for pos, (nombre, stats) in enumerate(tabla_ordenada, start=1):
+                marcador = " <<" if nombre == nombre_jugador else ""
+                print(
+                    f"  {pos:>2}. {nombre:<28} "
+                    f"PTS: {stats['PTS']:>3}  DG: {stats['DG']:>+4}{marcador}"
+                )
+            print()
+            print(f"  Posición obtenida : {posicion_final}°")
+            print(f"  Premio económico  : +${premio}")
+            print(f"  Caja tras premio  : ${partida['caja']}")
+            print("=" * 56)
+
+            # --- Placeholder próximo sprint: reinicio de temporada ---
+            partida["temporada_actual"] += 1
+            partida["fecha_actual"]      = 1
+            for stats in partida["tabla"].values():
+                for clave in ("PJ", "PG", "PE", "PP", "GF", "GC", "DG", "PTS"):
+                    stats[clave] = 0
+
+            guardar_partida(partida)
+            print(f"\n  [INFO] Temporada {partida['temporada_actual'] - 1} archivada. "
+                  f"Comenzando Temporada {partida['temporada_actual']}...")
+            print("=" * 56)
 
     # --- Opción 4: Cambiar táctica ---
     elif opcion == "4":
