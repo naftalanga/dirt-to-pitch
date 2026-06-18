@@ -1,6 +1,6 @@
 import json
 import os
-from dataclasses import asdict
+from dataclasses import asdict, fields
 from motor_core import Jugador, Equipo
 
 RUTA_DB = "db/partida.json"
@@ -15,10 +15,19 @@ def guardar_partida(partida: dict) -> None:
     """
     os.makedirs("db", exist_ok=True)
     # Las claves del fixture son int en memoria pero JSON las convierte a str; se guardan como str.
+    # Campos de Jugador que no deben persistirse (uso solo en memoria)
+    _EXCLUIR_JUGADOR = {"nota_evolucion"}
+
+    def _jugador_serializable(j: "Jugador") -> dict:
+        return {k: v for k, v in asdict(j).items() if k not in _EXCLUIR_JUGADOR}
+
+    def _equipo_serializable(e: "Equipo") -> dict:
+        return {"nombre": e.nombre, "jugadores": [_jugador_serializable(j) for j in e.jugadores]}
+
     datos = {
-        "equipo":            asdict(partida["equipo"]),
+        "equipo":            _equipo_serializable(partida["equipo"]),
         "caja":              partida["caja"],
-        "rivales":           [asdict(r) for r in partida["rivales"]],
+        "rivales":           [_equipo_serializable(r) for r in partida["rivales"]],
         "fixture":           {str(k): v for k, v in partida["fixture"].items()},
         "fecha_actual":      partida["fecha_actual"],
         "tabla":             partida.get("tabla"),

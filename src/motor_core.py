@@ -16,13 +16,14 @@ ESTILOS = {
 @dataclass
 class Jugador:
     nombre: str
-    fis: float = 1.0   # Físico: velocidad y resistencia
-    tec: float = 1.0   # Técnica: pase, definición y control
-    defe: float = 1.0  # Defensa: recuperación y posicionamiento
-    men: float = 1.0   # Mentalidad: resistencia a la presión
-    arq: float = 1.0   # Arquero: exclusivo para guardametas (mínimo 1)
-    edad: int = 20     # Edad del jugador
-    precio: int = 0    # Valor de mercado calculado dinámicamente
+    fis: float = 1.0           # Físico: velocidad y resistencia
+    tec: float = 1.0           # Técnica: pase, definición y control
+    defe: float = 1.0          # Defensa: recuperación y posicionamiento
+    men: float = 1.0           # Mentalidad: resistencia a la presión
+    arq: float = 1.0           # Arquero: exclusivo para guardametas (mínimo 1)
+    edad: int = 20             # Edad del jugador
+    precio: int = 0            # Valor de mercado calculado dinámicamente
+    nota_evolucion: Optional[str] = field(default=None, repr=False)  # Uso temporal, no se persiste
 
 
 @dataclass

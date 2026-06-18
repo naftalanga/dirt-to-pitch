@@ -3,7 +3,10 @@ import random
 from db_manager import cargar_partida, guardar_partida
 from motor_core import simular_partido
 from liga import imprimir_tabla, inicializar_tabla, actualizar_tabla, generar_fixture
-from generador import generar_equipo_rival, NOMBRES_EQUIPOS
+from generador import (
+    generar_equipo_rival, NOMBRES_EQUIPOS,
+    envejecer_plantilla, generar_jugador_penca,
+)
 
 # ---------------------------------------------------------------------------
 # Constantes de táctica
@@ -198,6 +201,43 @@ while True:
                 print("  🔵 PERMANENCIA asegurada.")
                 print(f"  {nombre_jugador} seguirá en la División {partida['division_actual']} la próxima temporada.")
 
+            print("=" * 56)
+
+            # --- Paso del tiempo: envejecimiento de plantillas ---
+            print()
+            print("  --- INFORME DE PLANTILLA ---")
+
+            # Equipo del jugador
+            plantilla_jugador = partida["equipo"].jugadores
+            retirados_jugador = envejecer_plantilla(plantilla_jugador)
+
+            for nombre_ret in retirados_jugador:
+                print(f"  ⚪ [{nombre_ret}] se ha retirado.")
+
+            for j in plantilla_jugador:
+                if getattr(j, "nota_evolucion", None) == "mejoró":
+                    print(f"  📈 [{j.nombre}] ha mejorado (edad {j.edad}).")
+                elif getattr(j, "nota_evolucion", None) == "empeoró":
+                    print(f"  📉 [{j.nombre}] ha declinado (edad {j.edad}).")
+                j.nota_evolucion = None
+
+            # Parche penca: rellenar cupos del equipo jugador
+            while len(plantilla_jugador) < 11:
+                tiene_arquero = any(j.arq > 1.0 for j in plantilla_jugador)
+                juvenil = generar_jugador_penca(es_arquero=not tiene_arquero)
+                plantilla_jugador.append(juvenil)
+                print(f"  ⚠️  [{juvenil.nombre}] sube como juvenil de emergencia "
+                      f"({'POR' if juvenil.arq > 1.0 else 'campo'}) — stats mínimos.")
+
+            # Equipos CPU: envejecer y rellenar
+            for rival in partida["rivales"]:
+                plantilla_rival = rival.jugadores
+                envejecer_plantilla(plantilla_rival)
+                while len(plantilla_rival) < 11:
+                    tiene_arquero = any(j.arq > 1.0 for j in plantilla_rival)
+                    plantilla_rival.append(generar_jugador_penca(es_arquero=not tiene_arquero))
+
+            print(f"  Plantilla final: {len(plantilla_jugador)} jugadores.")
             print("=" * 56)
 
             # --- Generar nueva temporada ---

@@ -243,6 +243,80 @@ def generar_equipo_rival(nombre: str, division: int = 3) -> Equipo:
 
 
 # ---------------------------------------------------------------------------
+# Paso del tiempo: envejecimiento y retiro
+# ---------------------------------------------------------------------------
+def envejecer_plantilla(jugadores: list) -> list[str]:
+    """
+    Recibe una lista de objetos Jugador (mutable, in-place).
+    - Suma 1 año a cada jugador.
+    - Jóvenes (<23): 30% de probabilidad de subir FÍS o TÉC +1.
+    - Veteranos (>31): 40% de probabilidad de bajar FÍS -1 (mín 1).
+    - Muy mayores (>35): 50% de probabilidad de retiro (eliminado de la lista).
+    Retorna lista de nombres de los jugadores retirados.
+    """
+    retirados = []
+
+    for i in range(len(jugadores) - 1, -1, -1):
+        j = jugadores[i]
+        j.edad += 1
+        j.nota_evolucion = None
+
+        # Retiro por vejez (>35)
+        if j.edad > 35 and random.random() < 0.50:
+            retirados.append(j.nombre)
+            jugadores.pop(i)
+            continue
+
+        # Declive veterano (>31)
+        if j.edad > 31 and random.random() < 0.40:
+            j.fis = max(1.0, j.fis - 1.0)
+            j.nota_evolucion = "empeoró"
+
+        # Mejora juvenil (<23)
+        elif j.edad < 23 and random.random() < 0.30:
+            if random.random() < 0.50:
+                j.fis += 1.0
+            else:
+                j.tec += 1.0
+            j.nota_evolucion = "mejoró"
+
+        # Recalcular precio
+        j.precio = int((j.fis + j.tec + j.defe + j.men + j.arq) * _PRECIO_FACTOR)
+
+    return retirados
+
+
+# ---------------------------------------------------------------------------
+# Juvenil de emergencia (stats paupérrimos)
+# ---------------------------------------------------------------------------
+def generar_jugador_penca(es_arquero: bool = False) -> Jugador:
+    """
+    Genera un jugador de 16 años con stats mínimos.
+    Usado como parche cuando la plantilla cae por debajo de 11.
+    """
+    nombre = f"{random.choice(NOMBRES)} {random.choice(APELLIDOS)} Jr."
+
+    if es_arquero:
+        j = Jugador(
+            nombre=nombre,
+            fis=1.0, tec=1.0, defe=1.0, men=1.0,
+            arq=3.0,
+            edad=16,
+            precio=100,
+        )
+    else:
+        j = Jugador(
+            nombre=nombre,
+            fis=2.0, tec=2.0, defe=2.0, men=2.0,
+            arq=1.0,
+            edad=16,
+            precio=100,
+        )
+
+    return j
+
+
+# ---------------------------------------------------------------------------
 # Smoke-test
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
