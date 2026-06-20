@@ -36,6 +36,83 @@ PREMIOS_POSICION = {
 # ---------------------------------------------------------------------------
 partida = cargar_partida()
 
+
+# ---------------------------------------------------------------------------
+# Mercado de Fichajes — Operación Salida (Pretemporada)
+# ---------------------------------------------------------------------------
+def menu_mercado(partida: dict) -> None:
+    """Sub-menú temporal de mercado disponible únicamente en la fecha 1."""
+    while True:
+        equipo_jugador = partida["equipo"]
+        print()
+        print("=" * 46)
+        print("       *** MERCADO DE FICHAJES ***")
+        print("         Operación Salida — Pretemporada")
+        print("=" * 46)
+        print(f"  Caja actual: ${partida['caja']}")
+        print(f"  Jugadores en plantilla: {len(equipo_jugador.jugadores)}")
+        print()
+        print("  1. Vender Jugador")
+        print("  2. Volver al Hub")
+        print()
+
+        opcion_m = input("  >> Elige una opción: ").strip()
+
+        if opcion_m == "1":
+            jugadores = equipo_jugador.jugadores
+            if not jugadores:
+                print()
+                print("  [!] No tienes jugadores en la plantilla.")
+                continue
+
+            print()
+            print("  --- PLANTILLA DISPONIBLE PARA VENTA ---")
+            print(f"  {'#':<4} {'NOMBRE':<28} {'EDAD':>4} {'FÍS':>4} {'TÉC':>4} "
+                  f"{'DEF':>4} {'MEN':>4} {'ARQ':>4}  {'PRECIO':>7}")
+            print("  " + "-" * 70)
+            for idx, j in enumerate(jugadores):
+                portero_tag = " [POR]" if j.arq > 1.0 else ""
+                print(
+                    f"  {idx:<4} {j.nombre:<28} {j.edad:>4} {j.fis:>4.0f} "
+                    f"{j.tec:>4.0f} {j.defe:>4.0f} {j.men:>4.0f} "
+                    f"{j.arq:>4.0f}  ${j.precio:>6}{portero_tag}"
+                )
+            print()
+
+            raw_idx = input("  >> Número del jugador a vender (o 'c' para cancelar): ").strip()
+            if raw_idx.lower() == "c":
+                continue
+
+            if not raw_idx.isdigit():
+                print("  [ERROR] Ingresa un número válido.")
+                continue
+
+            idx_venta = int(raw_idx)
+            if idx_venta < 0 or idx_venta >= len(jugadores):
+                print(f"  [ERROR] Índice fuera de rango. Elige entre 0 y {len(jugadores) - 1}.")
+                continue
+
+            jugador_vendido = jugadores.pop(idx_venta)
+            partida["caja"] += jugador_vendido.precio
+
+            print()
+            print("  " + "=" * 44)
+            print(f"  [VENTA OK] {jugador_vendido.nombre} ha sido traspasado.")
+            print(f"  Ingreso: +${jugador_vendido.precio}")
+            print(f"  Nueva caja: ${partida['caja']}")
+            print(f"  Jugadores restantes: {len(equipo_jugador.jugadores)}")
+            print("  " + "=" * 44)
+
+            guardar_partida(partida)
+
+        elif opcion_m == "2":
+            print("  [INFO] Volviendo al Hub...")
+            break
+
+        else:
+            print("  [ERROR] Opción inválida. Elige 1 o 2.")
+
+
 if partida is None:
     print("[ERROR] No hay partida guardada. Ejecuta mercado.py primero para crear una.")
     sys.exit()
@@ -67,6 +144,9 @@ while True:
         else "Finalizar Temporada"
     )
 
+    # Determinar si el mercado de pretemporada está activo
+    mercado_activo = (partida["fecha_actual"] == 1)
+
     print()
     print(f"=== HUB DEL MÁNAGER | Temp: {temporada_actual} - Div: {division_actual} ===")
     print(f"Fecha Actual: {fecha_actual} / 14  |  Caja: ${partida['caja']}")
@@ -74,7 +154,11 @@ while True:
     print("2. Ver Tabla de Posiciones")
     print(f"3. {label_opcion_3}")
     print(f"4. Cambiar Táctica          [Táctica actual: {formacion_actual} | {estilo_actual}]")
-    print("5. Guardar y Salir")
+    if mercado_activo:
+        print("5. Mercado de Fichajes      [PRETEMPORADA — Operación Salida]")
+        print("6. Guardar y Salir")
+    else:
+        print("5. Guardar y Salir")
     print()
 
     opcion = input(">> Elige una opción: ").strip()
@@ -100,6 +184,19 @@ while True:
     # --- Opción 3: Jugar Fecha / Finalizar Temporada ---
     elif opcion == "3":
         if partida["fecha_actual"] <= 14:
+            # ---- Validación de plantilla: exactamente 11 jugadores ----
+            num_jugadores = len(partida["equipo"].jugadores)
+            if num_jugadores != 11:
+                print()
+                print("  " + "!" * 56)
+                print(
+                    f"  [!] REGLAMENTO: No puedes iniciar la fecha. "
+                    f"Tu plantilla debe tener exactamente 11 jugadores. "
+                    f"(Actual: {num_jugadores}). Ve al Mercado."
+                )
+                print("  " + "!" * 56)
+                continue
+
             # ---- Jugar la fecha ----
             partidos_fecha = partida["fixture"][partida["fecha_actual"]]
             print(f"\n  --- FECHA {partida['fecha_actual']} ---")
@@ -266,6 +363,15 @@ while True:
                   f"Comenzando Temporada {partida['temporada_actual']} en Div {nueva_division}...")
             print("=" * 56)
 
+    # --- Opción 5 / 6 con mercado activo: Mercado de Fichajes o Guardar y Salir ---
+    elif opcion == "5" and mercado_activo:
+        menu_mercado(partida)
+
+    elif opcion == "6" and mercado_activo:
+        guardar_partida(partida)
+        print("[INFO] Partida guardada. ¡Hasta la próxima!")
+        break
+
     # --- Opción 4: Cambiar táctica ---
     elif opcion == "4":
         print()
@@ -299,11 +405,12 @@ while True:
             f"{partida['formacion_actual']} | {partida['estilo_actual']}"
         )
 
-    # --- Opción 5: Guardar y salir ---
-    elif opcion == "5":
+    # --- Opción 5: Guardar y salir (cuando mercado NO está activo) ---
+    elif opcion == "5" and not mercado_activo:
         guardar_partida(partida)
         print("[INFO] Partida guardada. ¡Hasta la próxima!")
         break
 
     else:
-        print("  [ERROR] Opción inválida. Elige un número entre 1 y 5.")
+        opciones_validas = "1-6" if mercado_activo else "1-5"
+        print(f"  [ERROR] Opción inválida. Elige un número entre {opciones_validas}.")
